@@ -1,0 +1,1479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>record64Class</class>
+ <widget class="QMainWindow" name="record64Class">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>927</width>
+    <height>738</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>600</width>
+    <height>500</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>9</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>record64</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>存放路径:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>48</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>文件名:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="m_path">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>5</y>
+      <width>741</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="m_name">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>42</y>
+      <width>791</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="m_bt_setpath">
+    <property name="geometry">
+     <rect>
+      <x>869</x>
+      <y>5</y>
+      <width>41</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="m_btstart_record">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>157</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开始录音</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="m_btstop_record">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>156</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>结束录音</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="m_bt_recognize">
+    <property name="geometry">
+     <rect>
+      <x>250</x>
+      <y>156</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>语音识别</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>192</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>当前状态:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="m_curr_status">
+    <property name="geometry">
+     <rect>
+      <x>113</x>
+      <y>192</y>
+      <width>241</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>217</y>
+      <width>101</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>识别结果:</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="m_te_result">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>225</y>
+      <width>821</width>
+      <height>51</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>279</y>
+      <width>121</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>出错信息:</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="m_te_errinfo">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>281</y>
+      <width>821</width>
+      <height>31</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="m_samplerate_44k">
+    <property name="geometry">
+     <rect>
+      <x>629</x>
+      <y>95</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>44100</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="m_samplerate_16k">
+    <property name="geometry">
+     <rect>
+      <x>629</x>
+      <y>117</y>
+      <width>81</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>16000</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="m_samplerate_8k">
+    <property name="geometry">
+     <rect>
+      <x>629</x>
+      <y>138</y>
+      <width>81</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>8000</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>619</x>
+      <y>78</y>
+      <width>101</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>采样率</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>78</y>
+      <width>101</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>声道</string>
+    </property>
+    <widget class="QRadioButton" name="m_mono">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>17</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>单声道</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="m_stereo">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>43</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>双声道</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>261</x>
+      <y>78</y>
+      <width>101</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>麦克风数量</string>
+    </property>
+    <widget class="QRadioButton" name="m_single_mac">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>18</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>单麦克</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="m_double_mac">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>44</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>双麦克</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_5">
+    <property name="geometry">
+     <rect>
+      <x>488</x>
+      <y>78</y>
+      <width>120</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>语音</string>
+    </property>
+    <widget class="QRadioButton" name="m_random">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>18</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>随便说</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="m_template">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>45</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>按模板说</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_6">
+    <property name="geometry">
+     <rect>
+      <x>374</x>
+      <y>78</y>
+      <width>101</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>说话人数</string>
+    </property>
+    <widget class="QRadioButton" name="m_one_person">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>16</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>一个人</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="m_two_person">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>44</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>两个人</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>78</y>
+      <width>131</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>渠道</string>
+    </property>
+    <widget class="QRadioButton" name="m_baidu">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>19</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>百度</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="m_xunfei">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>42</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>科大讯飞</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_7">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>323</y>
+      <width>441</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>左侧</string>
+    </property>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>18</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>乳头</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>61</y>
+       <width>90</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>皮肤</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_13">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>91</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>溢液</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_15">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>171</y>
+       <width>41</width>
+       <height>18</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>腺体</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_16">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>230</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>副乳</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_12">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>264</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>疼痛</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_rt_normal">
+     <property name="geometry">
+      <rect>
+       <x>62</x>
+       <y>23</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>正常</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_rt_up">
+     <property name="geometry">
+      <rect>
+       <x>153</x>
+       <y>23</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>上抬</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_rt_ax">
+     <property name="geometry">
+      <rect>
+       <x>256</x>
+       <y>22</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>凹陷</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_rt_ml">
+     <property name="geometry">
+      <rect>
+       <x>362</x>
+       <y>22</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>糜烂</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_pf_jwz">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>59</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>酒窝征</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_pf_jy">
+     <property name="geometry">
+      <rect>
+       <x>361</x>
+       <y>58</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>兼有</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_pf_jpy">
+     <property name="geometry">
+      <rect>
+       <x>255</x>
+       <y>58</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>橘皮样</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_pf_normal">
+     <property name="geometry">
+      <rect>
+       <x>61</x>
+       <y>59</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>正常</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_yy_single">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>96</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>单管</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_yy_no">
+     <property name="geometry">
+      <rect>
+       <x>61</x>
+       <y>96</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>无</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_yy_xx">
+     <property name="geometry">
+      <rect>
+       <x>361</x>
+       <y>95</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>血性</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_yy_multi">
+     <property name="geometry">
+      <rect>
+       <x>255</x>
+       <y>95</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>多管</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_yy_yellow">
+     <property name="geometry">
+      <rect>
+       <x>61</x>
+       <y>133</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>黄色</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_yy_ry">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>133</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>乳样</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_yy_qsy">
+     <property name="geometry">
+      <rect>
+       <x>255</x>
+       <y>132</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>清水样</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_xt_txz">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>170</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>条絮状</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_xt_jxxzh">
+     <property name="geometry">
+      <rect>
+       <x>255</x>
+       <y>169</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>局限性增厚</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_xt_normal">
+     <property name="geometry">
+      <rect>
+       <x>61</x>
+       <y>170</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>正常</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_xt_zk">
+     <property name="geometry">
+      <rect>
+       <x>61</x>
+       <y>203</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>肿块</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_xt_jjxzh">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>203</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>结节性增厚</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_fr_no">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>236</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>无</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_fr_yes">
+     <property name="geometry">
+      <rect>
+       <x>61</x>
+       <y>236</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>有</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_tt_dt">
+     <property name="geometry">
+      <rect>
+       <x>61</x>
+       <y>268</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>钝痛</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_tt_zt">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>300</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>胀痛</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_tt_jcxtt">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>268</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>经常性疼痛</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_tt_jqtt">
+     <property name="geometry">
+      <rect>
+       <x>303</x>
+       <y>267</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>经期疼痛</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_tt_rt">
+     <property name="geometry">
+      <rect>
+       <x>152</x>
+       <y>299</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>锐痛</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="ml_tt_no">
+     <property name="geometry">
+      <rect>
+       <x>255</x>
+       <y>299</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>否</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_8">
+    <property name="geometry">
+     <rect>
+      <x>460</x>
+      <y>323</y>
+      <width>451</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>右侧</string>
+    </property>
+    <widget class="QLabel" name="label_17">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>169</y>
+       <width>51</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>腺体</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_10">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>22</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>乳头</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_14">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>94</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>溢液</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_11">
+     <property name="geometry">
+      <rect>
+       <x>9</x>
+       <y>57</y>
+       <width>41</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>皮肤</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_9">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>261</y>
+       <width>41</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>疼痛</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_8">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>230</y>
+       <width>51</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>副乳</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_rt_normal">
+     <property name="geometry">
+      <rect>
+       <x>61</x>
+       <y>23</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>正常</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_rt_up">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>23</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>上抬</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_rt_ax">
+     <property name="geometry">
+      <rect>
+       <x>268</x>
+       <y>23</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>凹陷</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_rt_ml">
+     <property name="geometry">
+      <rect>
+       <x>376</x>
+       <y>18</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>糜烂</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_pf_jy">
+     <property name="geometry">
+      <rect>
+       <x>376</x>
+       <y>52</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>兼有</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_pf_jpy">
+     <property name="geometry">
+      <rect>
+       <x>268</x>
+       <y>57</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>橘皮样</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_pf_jwz">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>57</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>酒窝征</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_pf_normal">
+     <property name="geometry">
+      <rect>
+       <x>61</x>
+       <y>57</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>正常</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_yy_multi">
+     <property name="geometry">
+      <rect>
+       <x>267</x>
+       <y>94</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>多管</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_yy_xx">
+     <property name="geometry">
+      <rect>
+       <x>375</x>
+       <y>89</y>
+       <width>71</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>血性</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_yy_no">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>94</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>无</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_yy_single">
+     <property name="geometry">
+      <rect>
+       <x>149</x>
+       <y>94</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>单管</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_yy_qsy">
+     <property name="geometry">
+      <rect>
+       <x>266</x>
+       <y>133</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>清水样</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_yy_ry">
+     <property name="geometry">
+      <rect>
+       <x>148</x>
+       <y>133</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>乳样</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_yy_yellow">
+     <property name="geometry">
+      <rect>
+       <x>59</x>
+       <y>133</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>黄色</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_xt_normal">
+     <property name="geometry">
+      <rect>
+       <x>59</x>
+       <y>168</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>正常</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_xt_txz">
+     <property name="geometry">
+      <rect>
+       <x>148</x>
+       <y>168</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>条絮状</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_xt_jxxzh">
+     <property name="geometry">
+      <rect>
+       <x>266</x>
+       <y>168</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>局限性增厚</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_xt_zk">
+     <property name="geometry">
+      <rect>
+       <x>59</x>
+       <y>203</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>肿块</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_xt_jjxzh">
+     <property name="geometry">
+      <rect>
+       <x>148</x>
+       <y>203</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>结节性增厚</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_fr_yes">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>235</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>有</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_fr_no">
+     <property name="geometry">
+      <rect>
+       <x>149</x>
+       <y>235</y>
+       <width>71</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>无</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_tt_jqtt">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>265</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>经期疼痛</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_tt_dt">
+     <property name="geometry">
+      <rect>
+       <x>59</x>
+       <y>265</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>钝痛</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_tt_jcxtt">
+     <property name="geometry">
+      <rect>
+       <x>149</x>
+       <y>265</y>
+       <width>130</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>经常性疼痛</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_tt_rt">
+     <property name="geometry">
+      <rect>
+       <x>149</x>
+       <y>296</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>锐痛</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_tt_zt">
+     <property name="geometry">
+      <rect>
+       <x>59</x>
+       <y>296</y>
+       <width>68</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>胀痛</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="mr_tt_no">
+     <property name="geometry">
+      <rect>
+       <x>264</x>
+       <y>296</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>否</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_18">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>659</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>乳房类型</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="m_rf_zmx">
+    <property name="geometry">
+     <rect>
+      <x>109</x>
+      <y>664</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>致密型</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="m_rf_zfx">
+    <property name="geometry">
+     <rect>
+      <x>209</x>
+      <y>664</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>脂肪型</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="m_btstart_listen">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>156</y>
+      <width>98</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>开始监听</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="m_btstop_listen">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>155</y>
+      <width>98</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>结束监听</string>
+    </property>
+   </widget>
+   <zorder>groupBox_8</zorder>
+   <zorder>groupBox_7</zorder>
+   <zorder>groupBox</zorder>
+   <zorder>label</zorder>
+   <zorder>label_2</zorder>
+   <zorder>m_path</zorder>
+   <zorder>m_name</zorder>
+   <zorder>m_bt_setpath</zorder>
+   <zorder>m_btstart_record</zorder>
+   <zorder>m_btstop_record</zorder>
+   <zorder>m_bt_recognize</zorder>
+   <zorder>label_3</zorder>
+   <zorder>m_curr_status</zorder>
+   <zorder>label_4</zorder>
+   <zorder>m_te_result</zorder>
+   <zorder>label_5</zorder>
+   <zorder>m_te_errinfo</zorder>
+   <zorder>m_samplerate_44k</zorder>
+   <zorder>m_samplerate_16k</zorder>
+   <zorder>m_samplerate_8k</zorder>
+   <zorder>groupBox_3</zorder>
+   <zorder>groupBox_4</zorder>
+   <zorder>groupBox_5</zorder>
+   <zorder>groupBox_6</zorder>
+   <zorder>groupBox_2</zorder>
+   <zorder>label_18</zorder>
+   <zorder>m_rf_zmx</zorder>
+   <zorder>m_rf_zfx</zorder>
+   <zorder>m_btstart_listen</zorder>
+   <zorder>m_btstop_listen</zorder>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>927</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="record64.qrc"/>
+ </resources>
+ <connections/>
+</ui>
